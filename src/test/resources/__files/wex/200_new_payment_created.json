@@ -1,0 +1,8 @@
+{
+  "transactionId": "e4af0203-a13d-47d7-9e50-a49b61cced8e",
+  "purchaseAmount": 12345.22,
+  "originalCurrency": "USD",
+  "transactionDescription": "Big Payment",
+  "transactionDate": "2023-09-05T20:01:18",
+  "createdUser": "IBasu"
+}

@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: Wex Exchange Service
+  webflux:
+    base-path: /paymentexchange
+  datasource:
+    url: jdbc:h2:mem:paymentsexchange
+    username: sa
+    password: password
+    driverClassName: org.h2.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    database: H2
+    show-sql: true
+    hibernate:
+      ddl-auto: validate
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+      settings:
+        web-allow-others: false
+
+services:
+  treasury:
+    base-url: http://localhost
+    exchange-rate: /v1/accounting/od/rates_of_exchange
+    exchange-rate-fields: country_currency_desc,exchange_rate,record_date
+    cache-refresh: false
+    retry-attempts: 3
+    retry-delay-in-secs: 2
