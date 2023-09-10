@@ -13,7 +13,6 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.RegisterExtension;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.DynamicPropertyRegistry;
 import org.springframework.test.context.DynamicPropertySource;
@@ -93,7 +92,7 @@ class PaymentControllerTest {
                 WireMock.get(exchangeRateRoute)
                         .willReturn(aResponse()
                                 .withStatus(INTERNAL_SERVER_ERROR.value())
-        ));
+                        ));
 
         this.webTestClient
                 .get()
