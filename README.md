@@ -59,7 +59,7 @@ maintaining:
 
 Following are the 2 endpoints exposed by this microservice:
 - POST /paymentexchange/api/v1/payments : Creates a new payment transaction in USD
-- GET paymentexchange/api/v1/payments/{transactionId}/{countryCurrencyDesc} : Retrieves an existing transaction in the sepecified Country Currency
+- GET /paymentexchange/api/v1/payments/{transactionId}/{countryCurrencyDesc} : Retrieves an existing transaction in the sepecified Country Currency
 
 ##### Design Considerations
 - A java based spring boot RESTful application which accepts HTTP requests in JSON format ONLY
